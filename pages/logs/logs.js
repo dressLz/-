@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Page({
 
   /**
@@ -64,20 +63,3 @@ Page({
     
   }
 })
-=======
-//logs.js
-const util = require('../../utils/util.js')
-
-Page({
-  data: {
-    logs: []
-  },
-  onLoad: function () {
-    this.setData({
-      logs: (wx.getStorageSync('logs') || []).map(log => {
-        return util.formatTime(new Date(log))
-      })
-    })
-  }
-})
->>>>>>> 572cbd9d546c6a6d5806a61dba76e56e8a986c02

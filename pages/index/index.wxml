@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!-- "navigationStyle":"custom" -->
 <view class="index-page">
    <view class="header">
@@ -41,6 +40,3 @@
       <view class="tips-box">已将本书存至手机，可离线观看</view>
    </view>
 </view> 
-=======
-d
->>>>>>> 572cbd9d546c6a6d5806a61dba76e56e8a986c02

@@ -4,16 +4,11 @@
 		"ignore": []
 	},
 	"setting": {
-<<<<<<< HEAD
 		"urlCheck": false,
-=======
-		"urlCheck": true,
->>>>>>> 572cbd9d546c6a6d5806a61dba76e56e8a986c02
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-<<<<<<< HEAD
 		"autoAudits": false,
 		"checkInvalidKey": true
 	},
@@ -21,23 +16,12 @@
 	"libVersion": "2.6.6",
 	"appid": "wx0012eca748ca9982",
 	"projectname": "%E6%B7%98%E7%9F%A5%E7%82%B9%E8%AF%BB",
-=======
-		"autoAudits": false
-	},
-	"compileType": "miniprogram",
-	"libVersion": "2.6.6",
-	"appid": "wx3a30943b5a0098c1",
-	"projectname": "read",
->>>>>>> 572cbd9d546c6a6d5806a61dba76e56e8a986c02
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
 	"isGameTourist": false,
-<<<<<<< HEAD
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
-=======
->>>>>>> 572cbd9d546c6a6d5806a61dba76e56e8a986c02
 	"condition": {
 		"search": {
 			"current": -1,
@@ -47,19 +31,15 @@
 			"current": -1,
 			"list": []
 		},
-<<<<<<< HEAD
 		"plugin": {
 			"current": -1,
 			"list": []
 		},
-=======
->>>>>>> 572cbd9d546c6a6d5806a61dba76e56e8a986c02
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-<<<<<<< HEAD
 			"current": 1,
 			"list": [
 				{
@@ -76,10 +56,6 @@
 					"scene": null
 				}
 			]
-=======
-			"current": -1,
-			"list": []
->>>>>>> 572cbd9d546c6a6d5806a61dba76e56e8a986c02
 		}
 	}
 }
