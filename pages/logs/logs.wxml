@@ -1,1 +1,10 @@
+<<<<<<< HEAD
 <image src=""></image>
+=======
+<!--logs.wxml-->
+<view class="container log-list">
+  <block wx:for="{{logs}}" wx:for-item="log">
+    <text class="log-item">{{index + 1}}. {{log}}</text>
+  </block>
+</view>
+>>>>>>> 572cbd9d546c6a6d5806a61dba76e56e8a986c02

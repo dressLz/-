@@ -34,7 +34,11 @@ App({
     })
   },
   globalData: {
+<<<<<<< HEAD
     userInfo: null,
     imgurl: 'https://open.oss.taozhi.cn/audiobook/local/',//测试前缀 ==>正式前缀https://open.oss.taozhi.cn/audiobook/production/
+=======
+    userInfo: null
+>>>>>>> 572cbd9d546c6a6d5806a61dba76e56e8a986c02
   }
 })

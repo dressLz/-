@@ -1,4 +1,8 @@
 {
+<<<<<<< HEAD
   "navigationBarTitleText": "淘知点读",
   "usingComponents": {}
+=======
+  "navigationBarTitleText": "查看启动日志"
+>>>>>>> 572cbd9d546c6a6d5806a61dba76e56e8a986c02
 }

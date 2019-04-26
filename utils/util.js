@@ -8,10 +8,15 @@ const formatTime = date => {
 
   return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 572cbd9d546c6a6d5806a61dba76e56e8a986c02
 const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
 }
+<<<<<<< HEAD
 // 网络请求
 function requestFun(type,url,data){
   var data=new Promise(function(resolve,reject){
@@ -35,4 +40,9 @@ function requestFun(type,url,data){
 module.exports = {
   formatTime: formatTime,
   requestFun:requestFun,
+=======
+
+module.exports = {
+  formatTime: formatTime
+>>>>>>> 572cbd9d546c6a6d5806a61dba76e56e8a986c02
 }
