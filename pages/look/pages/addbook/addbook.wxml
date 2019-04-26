@@ -1,0 +1,34 @@
+<view class="add-page" style="{{subjectshow || addbookM?'overflow-y:hidden;':'overflow-y:auto'}}">
+  <view class="header-seach">
+    <view class="seach-item" wx:for="{{seachList}}" wx:key="{{index}}" catchtap='seachcondition' data-index="{{index}}">
+      <text>{{item.name}}</text>
+      <view class="{{item.isshow?'triangle_border_up':'triangle_border_down'}} icon"></view>
+    </view>
+    <!-- 选择列表 -->
+      <view class="seach-bsolute" wx:if="{{subjectshow}}">
+        <view class="bsolute-item {{item.check?'active':''}}" wx:for="{{seachsub[seachIndex]}}" wx:key="key" catchtap='selectedseach' data-index="{{index}}">{{item.name}}</view>
+      </view>
+  </view>
+  <view class="mask-page" wx:if="{{subjectshow}}"></view>
+  <!-- content -->
+  <view class="content">
+    <view class="content-item" wx:for="{{bookList}}" wx:key="key" style="{{(index+1)%3==0?'margin-right:0;':'margin-right:30rpx;'}}" catchtap='addbook'>
+      <image src="{{imgurl}}{{item.cover}}?x-oss-process=style/book-cover" class='coverImg' mode='aspectFill'></image>
+      <!-- <view class="before">已添加</view> -->
+    </view>
+  </view>
+   <view class="mask" wx:if="{{addbookM}}">
+     <view class="box">
+        <view class="moudel">
+           <view class="thing">确认清空所选的下载内容？</view>
+           <view class="box-btn">
+             <view class="operating" catchtap='cancelClick'>取消</view>
+             <view class="operating" catchtap='addClick'>确认</view>
+           </view>
+        </view>
+     </view>
+   </view>
+  <!-- contact -->
+  <view class="contact">找不到想要的书？
+    <text class="text">告诉我们</text> </view>
+</view>

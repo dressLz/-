@@ -1,0 +1,292 @@
+/* pages/read/read.wxss */
+.read-page{
+  width:100%;
+  min-height:100vh;
+  box-sizing: border-box;
+}
+.read-page .read-header{
+  width:100%;
+  height:134rpx;
+  box-sizing: border-box;
+  background:rgba(255,255,255,1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:0 26rpx 0 17rpx;
+  border-bottom:0.5rpx solid rgba(234,234,234,1);
+  position: fixed;
+  top:0rpx;left:0;
+  animation:mymove 0.6s infinite;
+  -webkit-animation:mymove 0.6s infinite;
+  animation-iteration-count:1;
+}
+@keyframes mymove
+{
+from {top:-134rpx;}
+to {top:0rpx;}
+}
+@-webkit-keyframes mymove /*Safari and Chrome*/
+{
+from {top:-134rpx;}
+to {top:0rpx;}
+}
+.read-header .header-left{
+  display: flex;
+  align-items: center;
+}
+.read-header .backto{
+  width:48rpx;
+  height:48rpx;
+  margin-right:35rpx;
+}
+.header-left .btn .icon{
+  width:60rpx;
+  height:60rpx;
+}
+.header-left .btn{
+  font-size:22rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(90,90,90,1);
+  text-align: center;
+  margin-right:40rpx;
+}
+.header-left .btn:last-child{
+  margin-right: 0;
+}
+.header-right{
+ font-size:22rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(90,90,90,1);
+  text-align: center; 
+}
+.header-right .icon{
+  width:60rpx;
+  height:60rpx;
+}
+/* 底部滑块 */
+.bottom-scroll{
+  width:100%;
+  height:140rpx;
+  box-sizing: border-box;
+  position: fixed;
+  bottom:0;
+  left:0;
+  background:rgba(0,0,0,0.7);
+  white-space: nowrap;
+  padding-left:229rpx;
+  -webkit-animation:bottomKey 0.6s infinite;
+  animation:bottomKey 0.6s infinite;
+  animation-iteration-count:1;
+}
+@keyframes bottomKey{
+  from{bottom:-140rpx}
+  top{bottom:0rpx}
+}
+@-webkit-keyframes bottomKey{
+  from{bottom:-140rpx}
+  top{bottom:0rpx}
+}
+.bottom-scroll .bottom-scroll-item{
+  width:92rpx;
+  height:132rpx;  
+  background: #eee;
+  margin-left:8rpx; 
+  display:inline-block;
+  position: relative;
+  margin-top:4rpx;
+}
+.bottom-scroll .pageindex{
+  position: absolute;
+  width:92rpx;
+  height:28rpx;
+  background:rgba(255,255,255,0.7);
+  bottom:0;
+  left:0;
+  font-size:20rpx;
+  font-family:PingFang-SC-Heavy;
+  font-weight:800;
+  color:rgba(51,51,51,1);
+  text-align: center;
+  line-height:28rpx;
+}
+.bottom-scroll .active{
+  border:4rpx solid rgba(249,62,62,1);
+  border-radius:6px;
+  margin-top:0;
+}
+.mask{
+  width:100%;
+  height:100vh;
+  background:rgba(0,0,0,0.6);
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 100;
+  box-sizing: border-box;
+}
+/* 左侧目录 */
+.leftul-box{
+  width:640rpx;
+  background: #fff;
+  height:100vh;
+  overflow-y: scroll;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 200;
+}
+.leftul-box .headcover{
+  width:640rpx;
+  height: 350rpx;
+  background: url('https://open.oss.taozhi.cn/audiobook/asset/read/toubu.png');
+  box-sizing: border-box;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-bottom:1px dashed rgba(213,213,214,1);
+  padding-left: 40rpx;
+  padding-top:142rpx;
+}
+.contcover{
+  display: flex;
+  align-items: center
+}
+.contcover .bookcover{
+  width:120rpx;
+  height:168rpx;
+  background: #eeeeee;
+  box-shadow:0px 10px 14px 0px rgba(0, 0, 0, 0.15);
+  margin-right:30rpx;
+}
+.contcover .theLord{
+  font-size:34rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(51,51,51,1);
+  margin-bottom:23rpx;
+}
+.contcover .vice{
+  font-size:24rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(169,169,169,1);
+}
+.ul .li-item{
+  width:100%;
+  height:100rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:0 40rpx 0 30rpx;
+  font-size:30rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(90,90,90,1);
+  border-bottom:0.5rpx solid rgba(213,213,214,0.5);
+}
+.ul .li-item .text{
+  font-size:30rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(169,169,169,1);
+}
+/* 语速 */
+.speechrate{
+  width:100%;
+  height:100vh;
+  background:rgba(0,0,0,0.7);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  z-index:200;
+  position: fixed;
+  top:0;
+  left: 0;
+}
+.speechrate .speechrate-box{
+  width:480rpx;
+  height: 180rpx;
+  background: #ffffff;
+  border-radius:10px;
+  box-sizing: border-box;
+  padding:24rpx 19rpx;
+}
+.column{
+  font-size:32rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(0,0,0,1);
+  text-align: center;
+  margin-bottom:30rpx; 
+}
+.progress-box{
+  position: relative;
+}
+.progress-box .control-box{
+  width:30rpx;
+  height:30rpx;
+  box-sizing: border-box;
+  background:rgba(255,255,255,1);
+  border:2rpx solid rgba(0,165,255,1);
+  border-radius:50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  }
+.progress-box .control{
+  position: absolute;
+  top:-13rpx;
+  left:40%;
+}
+.progress-box .control .radius{
+  width:14rpx;
+  height:14rpx;
+  background:rgba(0,165,255,1);
+  border-radius:50%;
+}
+.progress-box .sum-box{
+  position: absolute;
+  font-size:28rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(0,162,255,1);
+  line-height: 22rpx;
+  bottom:-42rpx;
+}
+.Identification{
+  display: flex;
+  justify-content: space-between;
+  font-size:26rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(51,51,51,1);
+  margin-top:31rpx;
+}
+.textColor{
+  color:rgba(249,62,62,1);
+}
+/* 内容 */
+.read-content{
+  width:100%;
+  box-sizing: border-box;
+}
+.read-content .book-sequence{
+  width:100%;
+  /* animation: flipbook 3s infinite;
+  animation-iteration-count:1; */
+}
+@keyframes flipbook{
+  from{
+    transform:rotateZ(0deg) rotateY(0deg) rotateX(0deg);
+    transform-origin:0 0;
+  }
+  to{
+    transform:rotateZ(0deg) rotateY(180deg) rotateX(0deg);
+    transform-origin:0 0;
+  }
+}

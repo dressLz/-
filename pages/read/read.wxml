@@ -1,0 +1,90 @@
+<view class="read-page" bindtouchstart='touchStart' bindtouchmove='touchMove' bindtouchend='touchEnd'>
+   <!-- 顶部控制器 -->
+   <view class="read-header {{bottom_show?'activeTop':''}}" wx:if="{{bottom_show}}">
+     <view class="header-left">
+        <image class="backto" src="https://open.oss.taozhi.cn/audiobook/asset/read/fanhui.png"></image>
+        <view class="btn">
+           <image class="icon" src="https://open.oss.taozhi.cn/audiobook/asset/read/mulu.png"></image>
+           <view>目录</view>
+        </view>
+        <view class="btn">
+           <image class="icon" src="https://open.oss.taozhi.cn/audiobook/asset/read/lianbo.png"></image>
+           <view>连播</view>
+        </view>
+        <view class="btn">
+           <image class="icon" src="https://open.oss.taozhi.cn/audiobook/asset/read/fudu.png"></image>
+           <view>复读</view>
+        </view>
+        <view class="btn">
+           <image class="icon" src="https://open.oss.taozhi.cn/audiobook/asset/read/dandu.png"></image>
+           <view>单读</view>
+        </view>
+     </view>
+     <view class="header-right">
+       <image class="icon" src="https://open.oss.taozhi.cn/audiobook/asset/read/yusu.png"></image>
+       <view>语速</view>
+     </view>
+   </view>
+   <view class="read-content" catchtap='showControl'>
+      <image src="{{imgurl+bookset[activeIndex].imgUrl}}" class="book-sequence" mode="widthFix"></image>
+   </view>
+   <!-- 底部切换栏目 -->
+   <scroll-view class="bottom-scroll" scroll-x="{{true}}" wx:if="{{bottom_show}}">
+      <view class="bottom-scroll-item">
+        <view class="pageindex">1</view>
+      </view>
+      <view class="bottom-scroll-item">
+        <view class="pageindex">2</view>
+      </view>
+   </scroll-view>
+</view>
+<!-- 语速 -->
+<block wx:if="{{speechrate}}">
+  <view class="speechrate">
+    <view class="speechrate-box">
+      <view class="column">设置语速</view>
+      <view class="progress-box">
+         <progress percent="40" stroke-width="4" activeColor="#00A2FF" backgroundColor='rgba(212,212,212,1)'/>
+         <view class="control">
+           <view class="control-box">
+             <view class="radius"></view>
+             <view class="sum-box">
+               1.0x
+             </view>
+           </view>
+         </view>
+         <view class="Identification">
+           <text class="textColor">慢</text>
+           <text>快</text>
+         </view>
+      </view>
+    </view>
+  </view>
+</block>
+<!-- 左侧 -->
+<view class="mask" wx:if="{{leftul_show}}" catchtap='maskmouver'>
+<view class="leftul-box">
+  <view class="headcover">
+     <view class="contcover">
+        <image src="" class="bookcover"></image>
+        <view class="text">
+           <view class="theLord">语文教材</view>
+           <view class="vice">语文教材</view>
+        </view>
+     </view>
+  </view>
+  <view class="ul">
+    <view class="li-item">
+      <text>1 山中访友</text>
+      <text class="text">1</text>
+    </view>
+    <view class="li-item">
+      <text>1 山中访友</text>
+      <text class="text">1</text>
+    </view><view class="li-item">
+      <text>1 山中访友</text>
+      <text class="text">1</text>
+    </view>
+  </view>
+</view>
+</view>
